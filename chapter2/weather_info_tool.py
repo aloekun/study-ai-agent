@@ -13,6 +13,8 @@ def get_current_weather(location, unit="fahrenheit"):
         return json.dumps({"location": location, "temperature": "unknown"})
 
 
+# ツールの定義
+# function["parameters"]["properties"]["location"]["description"]に "which name is English" を書かないと日本語で返してきてコケたので、調整した
 tools = [
     {
         "type": "function",
