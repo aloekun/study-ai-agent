@@ -14,6 +14,8 @@ model = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
 output_parser = StrOutputParser()
 
 chain = prompt | model | output_parser
+# streamメソッドを使って、ストリーム処理を行う
+# streamメソッドは、ジェネレーターを返すので、for文で順次出力する
 for chunk in chain.stream({"animal": "猫"}):
     print(chunk, end="", flush=True)
 

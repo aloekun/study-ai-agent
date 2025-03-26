@@ -14,6 +14,7 @@ model = ChatOpenAI(model_name="gpt-4o-mini", temperature=0)
 output_parser = StrOutputParser()
 
 chain = prompt | model | output_parser
+# batchメソッドを使って、複数の入力を一括処理する
 output = chain.batch([{"animal": "ハムスター"}, {"animal": "ビーバー"}])
 
 print(output)
