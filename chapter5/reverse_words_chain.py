@@ -4,6 +4,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.runnables import chain
 
 
+# 入力された文章の単語を逆順にして返す関数
 @chain
 def reverse_words(text: str) -> str:
     arr = text.split()

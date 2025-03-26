@@ -4,6 +4,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.runnables import RunnableLambda
 
 
+# テキストを小文字に変換する関数
 def lower(text: str) -> str:
     return text.lower()
 
